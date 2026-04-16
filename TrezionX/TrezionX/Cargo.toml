@@ -1,12 +1,15 @@
 [package]
 name = "TrezionX"
-version = "9.0.0"
+version = "1.0.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
-tokio = { version = "1.35", features = ["full"] }
-reqwest = { version = "0.11", features = ["json", "cookies", "blocking"] }
+reqwest = { version = "0.11", features = ["blocking", "native-tls"] }
 rand = "0.8"
 colored = "2.0"
-socket2 = { version = "0.5", features = ["all"] }
+socket2 = "0.5"
 hex = "0.4"
+
+[build-dependencies]
+winres = "0.1"
